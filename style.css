@@ -68,16 +68,10 @@ a {
 	color: white;
 	width: 640px;
 	height: 80%;
-	max-width: 98%;
+	max-width: 90%;
 	margin: auto;
 	font-size: smaller;
 	padding: 10px;
-}
-
-.content h1 {
-	text-align: left;
-	padding: 0;
-	margin: 0;
 }
 
 @media screen and (max-width: 641px) {
