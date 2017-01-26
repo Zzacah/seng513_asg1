@@ -3,6 +3,7 @@ body{
 	margin: 0;
 	font-family: "Arial", Helvetica, sans-serif;
 	letter-spacing: 1.5px;
+	background: #d2d2d9);
 }
 
 nav {
@@ -105,37 +106,39 @@ th, td {
         padding: 0px;
         display: flex;
         flex-flow: row;
+        color: white;
     }
 
 #main > article {
     margin: 4px;
     padding: 5px;
-    border: 1px solid #cccc33;
-    border-radius: 7pt;
     background: rgba(18, 18, 21, 0.9);
     flex: 3 1 60%;
     order: 2;
-		text-align: left;
+	text-align: left;
+	font-weight: lighter;
 }
 
 #main > nav {
     margin: 4px;
     padding: 5px;
-    border: 1px solid #8888bb;
-    border-radius: 7pt;
     background: rgba(18, 18, 21, 0.9);
     flex: 1 6 20%;
     order: 1;
+    max-width: 641px;
 }
 
 #main > aside {
     margin: 4px;
     padding: 5px;
-    border: 1px solid #8888bb;
-    border-radius: 7pt;
     background: rgba(18, 18, 21, 0.9);
     flex: 1 6 20%;
     order: 3;
+    max-width: 641px;
+}
+
+#main > nav > img, #main > aside > img {
+	max-width: 90%;
 }
 
 @media screen and (max-width: 641px) {
@@ -154,16 +157,15 @@ th, td {
 	}
 
 	#main {
-            flex-direction: column;
-        }
+        flex-direction: column;
+    }
 
-        #main > article, #main > nav, #main > aside {
-        /* Return them to document order */
-            order: 0;
-        }
+    #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+        order: 0;
+    }
 
-        #main > nav, #main > aside, header, footer {
-            min-height: 50px;
-            max-height: 50px;
-        }
+    #main > nav, #main > aside, header, footer {
+        min-height: 50px;
+    }
 }
