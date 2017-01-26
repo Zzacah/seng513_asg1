@@ -67,11 +67,75 @@ a {
 	background-color: rgba(18, 18, 21, 0.90);
 	color: white;
 	width: 640px;
-	height: 80%;
 	max-width: 90%;
 	margin: auto;
 	font-size: smaller;
 	padding: 10px;
+}
+
+table {
+	width: 90%;
+	margin: auto;
+	overflow-y: hidden;
+	border: 1px solid gray;
+	border-collapse: collapse;
+}
+
+th, td {
+		padding: 5px;
+		font-size: larger;
+		border: 1px solid gray;
+}
+
+#No {
+	color: #ff2020;
+}
+
+.small-img {
+	height: 3em;
+}
+
+.content h1 {
+	display: inline;
+}
+
+#main {
+        min-height: 300px;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-flow: row;
+    }
+
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7pt;
+    background: rgba(18, 18, 21, 0.9);
+    flex: 3 1 60%;
+    order: 2;
+		text-align: left;
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: rgba(18, 18, 21, 0.9);
+    flex: 1 6 20%;
+    order: 1;
+}
+
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: rgba(18, 18, 21, 0.9);
+    flex: 1 6 20%;
+    order: 3;
 }
 
 @media screen and (max-width: 641px) {
@@ -88,4 +152,18 @@ a {
 	nav ul li {
 		padding: 7px;
 	}
+
+	#main {
+            flex-direction: column;
+        }
+
+        #main > article, #main > nav, #main > aside {
+        /* Return them to document order */
+            order: 0;
+        }
+
+        #main > nav, #main > aside, header, footer {
+            min-height: 50px;
+            max-height: 50px;
+        }
 }
