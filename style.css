@@ -128,6 +128,40 @@ th, td {
 	margin: auto;
 }
 
+.content-item {
+	display: inline-flex;
+	background-color: rgba(18, 18, 21, 0.90);
+	margin: 5px;
+	padding: 5px;
+}
+
+.content-item > img {
+	width: 35%;
+	height: auto;
+}
+
+.about-content {
+	position: relative;
+	color: white;
+	width: 1200px;
+	max-width: 90%;
+	margin: auto;
+	font-size: smaller;
+	padding: 10px;
+}
+
+#top-banner {
+	background-attachment: fixed;
+	/* Image from: https://i.ytimg.com/vi/F_JC8b7BYgQ/maxresdefault.jpg*/
+	background-image: url("assets/main-background.jpeg");
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+
 @media screen and (max-width: 641px) {
 	.image img{
 		width: 300px;
@@ -145,5 +179,13 @@ th, td {
 
 	#main > div {
 		width: 100%;
+	}
+
+	table {
+		font-size: smaller;
+	}
+
+	.content-item {
+		display: inline-block;
 	}
 }
